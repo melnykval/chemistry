@@ -1,1 +1,433 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    /* Colors */
+    --bs-bg: #1f2127;
+    --bs-card-bg: #252730;
+    --bs-dark: #191B20;
+    --bs-blue: #4360ed;
+    --bs-blue-darken: #3A61F6;
+    --bs-gray: #808191;
+    --bs-gray-border: #4A4C55;
+    --bs-focused-border: #86b7fe;
+    --bs-white: #fff;
+    --bs-input-white-text: #e9e6e6;
+    --bs-input-placeholder: #aaa7a7;
+    --bs-success: #34B1AA;
+    --bs-info: #896C00;
+    --bs-error: #F95F53;
+    /* Size */
+    --bs-left-menu-width: 350px;
+    --bs-gap: 25px;
+    --bs-input-height: 25px;
+    /* Buttons */
+    --bs-btn-padding-x: 20px;
+    --bs-btn-padding-y: 14px;
+    --bs-btn-disabled-opacity: 0.55;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
+    text-shadow: none;
+    margin: 0;
+}
+
+    [type=button]:focus,
+    a:active,
+    a:focus,
+    a:visited,
+    button::-moz-focus-inner,
+    input[type=reset]::-moz-focus-inner,
+    input[type=button]::-moz-focus-inner,
+    input[type=submit]::-moz-focus-inner,
+    input[type=file] > input[type=button]::-moz-focus-inner,
+    select::-moz-focus-inner {
+        outline: 0
+    }
+
+input,
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    box-shadow: none;
+    outline: transparent none 0;
+}
+
+textarea {
+    resize: none;
+    overflow-x: hidden;
+}
+
+    .btn,
+    .btn-group.open .dropdown-toggle,
+    .btn:active,
+    .btn:focus,
+    .btn:hover,
+    .btn:visited,
+    a,
+    a:active,
+    a:checked,
+    a:focus,
+    a:hover,
+    a:visited,
+    body,
+    button,
+    button:active,
+    button:hover,
+    button:visited,
+    div,
+    input,
+    input:active,
+    input:focus,
+    input:hover,
+    input:visited,
+    select,
+    select:active,
+    select:focus,
+    select:visited,
+    textarea,
+    textarea:active,
+    textarea:focus,
+    textarea:hover,
+    textarea:visited {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none
+    }
+
+        .btn.active.focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn:active:focus,
+        .btn:focus,
+        button,
+        button:active,
+        button:checked,
+        button:focus,
+        button:hover,
+        button:visited {
+            outline: 0;
+            outline-offset: 0
+        }
+
+        a:focus,
+        input:focus {
+            outline: none
+        }
+
+html {
+    font-size: 16px;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--bs-bg);
+    font-size: 1rem;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.blue-text {
+    color: var(--bs-blue);
+}
+
+/* Grid */
+
+.row {
+    display: flex;
+    gap: var(--bs-gap);
+    padding: var(--bs-gap);
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.card {
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    color: var(--bs-gray);
+    background-color: var(--bs-card-bg);
+    padding: var(--bs-gap);
+    height: 100%;
+}
+
+/* Buttons */
+
+.buttons-section {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.btn {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+    box-shadow: none;
+    
+}
+
+    .btn:not(:disabled) {
+        cursor: pointer;
+    }
+
+    .btn i {
+        font-size: 16px;
+    }
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #3A61F6;
+    --bs-btn-border-color: #3A61F6;
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid var(--bs-btn-border-color);
+    border-radius: 4px;
+    background-color: var(--bs-btn-bg);
+    transition: all 0.15s ease-in-out;
+}
+
+    .btn-primary:hover {
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #3152d1;
+        --bs-btn-hover-border-color: #2e4ec5;
+        color: var(--bs-btn-hover-color);
+        background-color: var(--bs-btn-hover-bg);
+        border-color: var(--bs-btn-hover-border-color);
+    }
+
+    .btn-primary:active {
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #2e4ec5;
+        --bs-btn-active-border-color: #2c49b9;
+        color: var(--bs-btn-active-color);
+        background-color: var(--bs-btn-active-bg);
+        border-color: var(--bs-btn-active-border-color);
+        box-shadow: var(--bs-btn-active-shadow);
+    }
+
+    .btn-primary:disabled {
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #3A61F6;
+        --bs-btn-disabled-border-color: #3A61F6;
+        color: var(--bs-btn-disabled-color);
+        pointer-events: none;
+        background-color: var(--bs-btn-disabled-bg);
+        border-color: var(--bs-btn-disabled-border-color);
+        opacity: var(--bs-btn-disabled-opacity);
+    }
+
+.btn-light {
+    --bs-btn-color: #000;
+    --bs-btn-bg: #808191;
+    --bs-btn-border-color: #808191;
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid var(--bs-btn-border-color);
+    border-radius: 4px;
+    background-color: var(--bs-btn-bg);
+    transition: all 0.15s ease-in-out;
+}
+
+    .btn-light:hover {
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #6d6e7b;
+        --bs-btn-hover-border-color: #666774;
+        color: var(--bs-btn-hover-color);
+        background-color: var(--bs-btn-hover-bg);
+        border-color: var(--bs-btn-hover-border-color);
+    }
+
+    .btn-light:active {
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #666774;
+        --bs-btn-active-border-color: #60616d;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        color: var(--bs-btn-active-color);
+        background-color: var(--bs-btn-active-bg);
+        border-color: var(--bs-btn-active-border-color);
+        box-shadow: var(--bs-btn-active-shadow);
+    }
+
+    .btn-light:disabled {
+        --bs-btn-disabled-color: #000;
+        --bs-btn-disabled-bg: #808191;
+        --bs-btn-disabled-border-color: #808191;
+        color: var(--bs-btn-disabled-color);
+        pointer-events: none;
+        background-color: var(--bs-btn-disabled-bg);
+        border-color: var(--bs-btn-disabled-border-color);
+        opacity: var(--bs-btn-disabled-opacity);
+    }
+
+/* Forms */
+
+.form-group {
+    margin-bottom: var(--bs-gap);
+}
+
+    .form-group label {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 1.4rem;
+        vertical-align: top;
+        margin-bottom: 8px;
+    }
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--bs-input-white-text);
+    appearance: none;
+    background-color: transparent;
+    background-clip: padding-box;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: 1px solid var(--bs-gray-border);
+    height: 44px;
+    box-shadow: none;
+    outline: 0;
+}
+
+input.form-control:focus {
+    border-color: var(--bs-focused-border);
+}
+
+::placeholder {
+    color: var(--bs-input-placeholder);
+}
+
+/* Icons */
+
+.bg-carbon {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -10px -10px;
+}
+
+
+.bg-centrifuge {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -158px -10px;
+}
+
+
+.bg-c_organic {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -10px -158px;
+}
+
+
+.bg-density {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -158px -158px;
+}
+
+
+.bg-gas {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -306px -10px;
+}
+
+
+.bg-pores {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -306px -158px;
+}
+
+
+.bg-oil {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -10px -306px;
+}
+
+
+.bg-press {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -158px -306px;
+}
+
+
+.bg-resistant {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -306px -306px;
+}
+
+
+.bg-volume {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -454px -10px;
+}
+
+
+.bg-wax {
+    width: 128px;
+    height: 128px;
+    background: url('assets/css_sprites.png') -454px -158px;
+}
+
+/* Typography */
+.display-2 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.display-3 {
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.display-4 {
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.display-4 {
+    font-size: 16px;
+    font-weight: 300;
+}
