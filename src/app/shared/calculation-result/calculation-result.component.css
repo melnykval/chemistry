@@ -1,0 +1,23 @@
+.result-placeholder-text {
+    margin-bottom: 15px;
+}
+
+.white-text {
+    color: var(--bs-white);
+}
+
+.success-text {
+    color: var(--bs-success);
+}
+
+.info-text {
+    color: var(--bs-info);
+}
+
+.error-text {
+    color: var(--bs-error);
+}
+
+.semi-bold-text {
+    font-weight: 500;
+}

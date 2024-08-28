@@ -1,1 +1,107 @@
-<p>це комонент газопроникнення</p>
+<div class="row">
+    <div class="col-50">
+        <!-- Лівий блок-->
+        <div class="card">
+
+            <!-- Інпути -->
+
+            <div class="form-group">
+                <label for="counter">Рахівник, мл</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="counter"
+                       placeholder="Введіть рахівник"
+                       mask="separator"
+                       [(ngModel)]="counter"> <!--[()]привязує значення input до змінної-->
+            </div>
+
+            <div class="form-group">
+                <label for="time">Час, сек</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="time"
+                       placeholder="Введіть кількість секунд"
+                       mask="separator"
+                       [(ngModel)]="time">
+            </div>
+
+            <div class="form-group">
+                <label for="l">Довжина, см</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="l"
+                       placeholder="Введіть довжину"
+                       mask="separator"
+                       [(ngModel)]="l">
+            </div>
+
+            <div class="form-group">
+                <label for="diameter">Діаметр, см</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="diameter"
+                       placeholder="Введіть діаметр"
+                       mask="separator"
+                       [(ngModel)]="diameter">
+            </div>
+
+            <div class="form-group">
+                <label for="pop">Р (поправка)</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="pop"
+                       placeholder="Введіть залежність вязкості повітря від тиску"
+                       mask="separator"
+                       [(ngModel)]="pop">
+            </div>
+
+            <div class="form-group">
+                <label for="tPop">t (поправка)</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="tPop"
+                       placeholder="Введіть залежність вязкості повітря від температури"
+                       mask="separator"
+                       [(ngModel)]="tPop">
+            </div>
+
+            <div class="form-group">
+                <label for="po">Ро</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="po"
+                       placeholder="Стала на 4 кгс/см2 в більшості не міняється"
+                       mask="separator"
+                       [(ngModel)]="po">
+            </div>
+
+            <!-- / Інпути -->
+
+            <!-- Кнопки -->
+
+            <div class="buttons-section">
+                <button type="button" class="btn btn-light" (click)="clear()">Очистити</button>
+                <button type="button" class="btn btn-primary" (click)="calc()">Розрахунок</button>
+            </div>
+            <!-- / Кнопки -->
+        </div>
+        <!-- / Лівий блок-->
+    </div>
+    <div class="col-50">
+        <!-- Правий блок-->
+        <div class="card">
+            <app-calculation-result resultLabel="Газопроникність"
+                                    [result]="result"
+                                    [resultError]="resultError"
+                                    resultDescription="Газопроникність – властивість матеріалу пропускати крізь себе газ при різниці тисків газу з різних сторін перегородки. Залежно від природи перегородки, а також від величини різниці тисків виділяють три основних типи газопроникності:  дифузійну, молекулярну ефузію, ламінарний потік"></app-calculation-result>
+        </div>
+        <!-- / Правий блок-->
+    </div>
+</div>

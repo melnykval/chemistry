@@ -1,13 +1,13 @@
 export enum AppComponents {
-    gas = 'gas', // Ãàçîïðîíèêí³ñòü
-    press = 'press', // Êàï³ëÿðíèé òèñê
-    centrifuge = 'centrifuge', // Öåíòðèôóãóâàííÿ
-    resistant = 'resistant', // Ïèòîìèé îï³ð
-    pores = 'pores', // Ïîðèñò³ñòü
-    volume = 'volume', // Îá'ºìíà âàãà
-    density = 'density', // Ì³íåðàëîã³÷íà ãóñòèíà
-    carbon = 'carbon', // Êàðáîíàòí³ñòü
-    oil = 'oil', // Íàôòîíàñè÷åííÿ
-    organic = 'organic', // Ñ Îðãàí³÷íèé
-    wax = 'wax', // 'Îá.âàãà â ïàðàô³í³'
+    gas = 'gas', // Газопроникність
+    press = 'press', // Капілярний тиск
+    centrifuge = 'centrifuge', // Центрифугування
+    resistant = 'resistant', // Питомий опір
+    pores = 'pores', // Пористість
+    volume = 'volume', // Об'ємна вага
+    density = 'density', // Мінералогічна густина
+    carbon = 'carbon', // Карбонатність
+    oil = 'oil', // Нафтонасичення
+    organic = 'organic', // С Органічний
+    wax = 'wax', // 'Об.вага в парафіні'
 }

@@ -1,0 +1,26 @@
+@if (resultError) {
+    <div class="result-placeholder-text display-2 error-text semi-bold-text">
+        Помилка!
+    </div>
+    <div class="result-placeholder-text display-4 error-text">
+        Відсутні данні. Введіть всі необхідні данні у форму, та спробуйте натиснути кнопку ще раз
+    </div>
+} @else {
+    @if (!result) {
+        <div class="result-placeholder-text display-3">
+            Введіть данні і натисніть кнопку
+        </div>
+        <div class="result-placeholder-text display-4"><span class="white-text">"Розрахунок"</span> для того, щоб побачити результат!
+        </div>
+    } @else {
+        <div class="result-placeholder-text display-3 white-text">
+            {{ resultLabel }}, для зазначених данних дорівнює:
+        </div>
+        <div class="result-placeholder-text display-2 success-text">
+            {{result}}
+        </div>
+        <div class="display-4 info-text">
+            {{resultDescription}}
+        </div>
+    }
+}
