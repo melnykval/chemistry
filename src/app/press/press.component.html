@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-50">
+        <!-- Лівий блок-->
+        <div class="card">
+
+            <!-- Інпути -->
+
+            <div class="form-group">
+                <label for="A">Рахівник, г/см3</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="A"
+                       placeholder="Введіть густину води"
+                       mask="separator"
+                       [(ngModel)]="A"> <!--[()]привязує значення input до змінної-->
+            </div>
+
+            <div class="form-group">
+                <label for="C">Кількість обертів центрифури</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="C"
+                       placeholder="Введіть кількість обертів"
+                       mask="separator"
+                       [(ngModel)]="C">
+            </div>
+
+            <div class="form-group">
+                <label for="E">Висота зразка Керну, см</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="E"
+                       placeholder="Введіть висоту Керну"
+                       mask="separator"
+                       [(ngModel)]="E">
+            </div>
+
+            <!-- / Інпути -->
+
+            <!-- Кнопки -->
+
+            <div class="buttons-section">
+                <button type="button" class="btn btn-light" (click)="clear()">Очистити</button>
+                <button type="button" class="btn btn-primary" (click)="calc()">Розрахунок</button>
+            </div>
+            <!-- / Кнопки -->
+        </div>
+        <!-- / Лівий блок-->
+    </div>
+    <div class="col-50">
+        <!-- Правий блок-->
+        <div class="card">
+            <app-calculation-result resultLabel="Капілярний тиск"
+                                    [result]="result"
+                                    [resultError]="resultError"
+                                    resultDescription="Капілярний тиск – використовується при розрахунку залишкового водонасичення."></app-calculation-result>
+        </div>
+        <!-- / Правий блок-->
+    </div>
+</div>

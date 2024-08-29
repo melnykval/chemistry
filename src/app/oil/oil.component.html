@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col-50">
+        <!-- Лівий блок-->
+        <div class="card">
+
+            <!-- Інпути -->
+
+            <div class="form-group">
+                <label for="C">Р0</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="C"
+                       placeholder="Введіть Р0"
+                       mask="separator"
+                       [(ngModel)]="C"> <!--[()]привязує значення input до змінної-->
+            </div>
+
+            <div class="form-group">
+                <label for="D">Р1</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="D"
+                       placeholder="Введіть Р1"
+                       mask="separator"
+                       [(ngModel)]="D">
+            </div>
+
+            <div class="form-group">
+                <label for="E">Р4</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="E"
+                       placeholder="Введіть Р4"
+                       mask="separator"
+                       [(ngModel)]="E">
+            </div>
+
+            <div class="form-group">
+                <label for="F">V води. мл</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="F"
+                       placeholder="Введіть ---"
+                       mask="separator"
+                       [(ngModel)]="F">
+            </div>
+
+            <div class="form-group">
+                <label for="G">пористість/100</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="G"
+                       placeholder="Введіть пористість/100!?"
+                       mask="separator"
+                       [(ngModel)]="G">
+            </div>
+
+            <div class="form-group">
+                <label for="H">V вага</label>
+                <input type="text"
+                       autocomplete="off"
+                       class="form-control"
+                       id="H"
+                       placeholder="Введіть V вага?"
+                       mask="separator"
+                       [(ngModel)]="H">
+            </div>
+
+            <!-- / Інпути -->
+
+            <!-- Кнопки -->
+
+            <div class="buttons-section">
+                <button type="button" class="btn btn-light" (click)="clear()">Очистити</button>
+                <button type="button" class="btn btn-primary" (click)="calc()">Розрахунок</button>
+            </div>
+            <!-- / Кнопки -->
+        </div>
+        <!-- / Лівий блок-->
+    </div>
+    <div class="col-50">
+        <!-- Правий блок-->
+        <div class="card">
+            <app-calculation-result resultLabel="Нафтонасичення"
+                                    [result]="result"
+                                    [resultError]="resultError"
+                                    resultDescription="Нафтонасичення – !!!"></app-calculation-result>
+        </div>
+        <!-- / Правий блок-->
+    </div>
+</div>

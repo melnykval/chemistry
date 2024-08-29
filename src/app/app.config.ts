@@ -7,7 +7,7 @@ import { routes } from './app.routes';
 export const appConfig: ApplicationConfig = {
     providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideEnvironmentNgxMask({
         allowNegativeNumbers: true,
-        decimalMarker: '.',
+        decimalMarker: ',',
         thousandSeparator: '',
     })]
 };

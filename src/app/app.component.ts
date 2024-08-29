@@ -4,11 +4,22 @@ import { NgClass } from '@angular/common';
 
 import { AppComponents } from './components.enum';
 import { GasComponent } from './gas/gas.component';
-
+import { PressComponent } from './press/press.component';
+import { OilComponent } from './oil/oil.component';
+import { PoresComponent } from './pores/pores.component';
+import  { VolumeComponent } from './volume/volume.component';
+import {  CarbonComponent } from './carbon/carbon.component';
+import {  WaxComponent } from './wax/wax.component';
+import { CentrifugeComponent } from './centrifuge/centrifuge.component';
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, NgClass, GasComponent],
+    imports: [
+      RouterOutlet, NgClass, GasComponent, 
+      PressComponent, OilComponent,
+      PoresComponent, VolumeComponent, WaxComponent,
+      CarbonComponent, CentrifugeComponent
+    ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
@@ -29,11 +40,7 @@ export class AppComponent {
     title: 'Центрифугування',
     image: 'bg-centrifuge',
     id: AppComponents.centrifuge
-  }, {
-    title: 'Питомий опір',
-    image: 'bg-resistant',
-    id: AppComponents.resistant
-  }, {
+  },  {
     title: 'Пористість',
     image: 'bg-pores',
     id: AppComponents.pores
@@ -42,10 +49,6 @@ export class AppComponent {
     image: 'bg-volume',
     id: AppComponents.volume
   }, {
-    title: 'Мінералогічна густина',
-    image: 'bg-density',
-    id: AppComponents.density
-  }, {
     title: 'Карбонатність',
     image: 'bg-carbon',
     id: AppComponents.carbon
@@ -53,10 +56,6 @@ export class AppComponent {
     title: 'Нафтонасичення',
     image: 'bg-oil',
     id: AppComponents.oil
-  }, {
-    title: 'С Органічний',
-    image: 'bg-c_organic',
-    id: AppComponents.organic
   }, {
     title: 'Об.вага в парафіні',
     image: 'bg-wax',
