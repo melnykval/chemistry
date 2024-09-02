@@ -39,23 +39,23 @@
             </div>
 
             <div class="form-group">
-                <label for="F">V води. мл</label>
+                <label for="F">V води мл</label>
                 <input type="text"
                        autocomplete="off"
                        class="form-control"
                        id="F"
-                       placeholder="Введіть ---"
+                       placeholder="Введіть V води"
                        mask="separator"
                        [(ngModel)]="F">
             </div>
 
             <div class="form-group">
-                <label for="G">пористість/100</label>
+                <label for="G">Пористість/100</label>
                 <input type="text"
                        autocomplete="off"
                        class="form-control"
                        id="G"
-                       placeholder="Введіть пористість/100!?"
+                       placeholder="Введіть пористість/100"
                        mask="separator"
                        [(ngModel)]="G">
             </div>
@@ -66,7 +66,7 @@
                        autocomplete="off"
                        class="form-control"
                        id="H"
-                       placeholder="Введіть V вага?"
+                       placeholder="Введіть V вагу"
                        mask="separator"
                        [(ngModel)]="H">
             </div>
@@ -89,7 +89,7 @@
             <app-calculation-result resultLabel="Нафтонасичення"
                                     [result]="result"
                                     [resultError]="resultError"
-                                    resultDescription="Нафтонасичення – !!!"></app-calculation-result>
+                                    resultDescription="Нафтонасичення – це характеристика пористих гірських порід, яка визначає частку порового простору, заповненого нафтою. Вона виражається у відсотках і вказує, наскільки насичена порода нафтою в порівнянні з іншими флюїдами, такими як вода або газ. Нафтонасичення є важливим параметром для оцінки обсягу видобувної нафти в нафтових резервуарах."></app-calculation-result>
         </div>
         <!-- / Правий блок-->
     </div>

@@ -36,10 +36,10 @@ export class VolumeComponent {
   }
 
   calc() {
-    this.resultError = (!this.P1 || !this.gasDensity || !this.P2 || !this.P3);
+    this.resultError = (!this.P1 || !this.gasDensity || !this.P3 || !this.P2);
     if (this.resultError) {
       return;
     }
-    this.result = calculateVolume(this.P1, this.gasDensity, this.P2, this.P3).toFixed(3);
+    this.result = calculateVolume(this.P1, this.gasDensity, this.P3, this.P2).toFixed(3);
   }
 }
